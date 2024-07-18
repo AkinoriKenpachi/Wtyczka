@@ -1,0 +1,136 @@
+html, body {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #323234 !important;
+    color: #ebebeb !important;
+  }
+  body {
+    height: 160px;
+    width: 200px;
+    border-radius: 15%;
+  }
+  h2 {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 12px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 8px;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 3px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  input:checked + .slider {
+    background-color: #367e7a;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #367e7a;
+  }
+  input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+  .container {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+  }
+  .options {
+    justify-content: space-between;
+  }
+  .buttonFormat {
+    justify-content: center;
+    margin: 7px 0;
+  }
+  .options label:first-child {
+    margin-right: 15px;
+    margin-bottom: 1px;
+    font-size: 13px;
+  }
+  .button {
+    position: relative;
+    overflow: hidden;
+    border: 0 solid #18181a;
+    color: #18181a;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 14px 13px 12px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #dfdfdf;
+    user-select: none;
+    touch-action: manipulation;
+    border-radius: 10px;
+  }
+  .button span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+  }
+  .button span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #367e7a;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+  }
+  .button:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+  }
+  .button:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
+  #text {
+    margin-top: 8px;
+  }

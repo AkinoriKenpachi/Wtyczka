@@ -1,0 +1,35 @@
+{
+   "action": {
+      "default_icon": "static/icon/icon.png",
+      "default_popup": "static/web/options.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery.min.js", "content.js"],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "beta",
+   "externally_connectable": {
+      "matches": [ "*://*.amazon.de/*" ]
+   },
+   "host_permissions": [ "*://*/*" ],
+   "icons": {
+      "128": "static/icon/icon.png",
+      "16": "static/icon/icon.png",
+      "48": "static/icon/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjmuQA+ozYUQXoHr/1uNhqiwk1rC0RCvilHc+MPyxzp+0NRrMn5Q/TCoksNCng/T7bMUPDh9qGC0AOXoEbvE2sp242KCEwsYmi1vRBM7/G9s8IwAP1DAHIWTlaldWcZfSjA0WCv314TY1pZQqJQLzr3hiwUIQo/LDZHEr7PS/+JhZAYjVUKV2Iipkx57MxwfN8dhVQUSkZ7CsRlBjuq9SNKCu231uV4JYD0lKCrp2ZPJx4kd7JP9zsFkl5+wBsRbPX5ekQXSmTNXpquqazyEQTfcY0SM2v/tU7K+D7eYZklxxJmUt94nXXWT8BtnsSFzSmgNjW7CnLqhD0+22FU/gtQIDAQAB",
+   "manifest_version": 3,
+   "name": "Ersa",
+   "options_page": "static/web/options.html",
+   "permissions": [ "tabs", "activeTab", "windows", "storage", "notifications", "unlimitedStorage"],
+   "short_name": "Y_Y",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.9.5",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "static/web/options.html", "jquery.min.js" ]
+   } ]
+}
